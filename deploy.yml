@@ -8,11 +8,6 @@
         name: shivraj25/calculator
         source: pull
 
-    - name : Pull mysql
-      docker_image:
-        name: mysql
-        source: pull
-
     - name: Create default containers
       docker_container:
         name: c1
