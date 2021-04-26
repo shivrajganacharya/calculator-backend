@@ -7,13 +7,20 @@
         name: shivraj25/calculator
         source: pull
 
-    - name : Pull mysql
-      docker_image:
-        name: mysql
-        source: pull
-
     - name: Create default containers
       docker_container:
         name: c1
         image: shivraj25/calculator
         state: present
+
+    - name: Pull mysql
+        docker_image:
+          name: mysql
+          source: pull
+
+    - name: Create default containers mysql
+        docker_container:
+          name: c2
+          image: mysql
+          state: present
+
